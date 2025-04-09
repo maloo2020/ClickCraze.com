@@ -1,0 +1,346 @@
+:root {
+    --bg-color: #0f0f23;
+    --text-color: #ffffff;
+    --accent-color: #00ffcc;
+    --revenue-color: #ff4d4d;
+    --banner-start: #ff7e5f;
+    --banner-end: #feb47b;
+    --card-bg: #1a1a2e;
+    --footer-bg: #2a2a3a;
+    --error-color: #ff3333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: rgba(15, 15, 35, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: var(--text-color);
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+.banner {
+    background: linear-gradient(135deg, var(--banner-start), var(--banner-end));
+    padding: 4rem 5%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.banner h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#channel-search {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+.analytics-section {
+    padding: 2rem 5%;
+}
+
+.channel-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#channel-thumbnail {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 2rem;
+    border: 3px solid var(--accent-color);
+}
+
+.channel-info h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.channel-info p {
+    opacity: 0.8;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.metric-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 255, 204, 0.2);
+}
+
+.metric-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.metric-card p {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.revenue-card {
+    background-color: rgba(255, 77, 77, 0.1);
+    border: 1px solid var(--revenue-color);
+}
+
+.revenue-card h3 {
+    color: var(--revenue-color);
+}
+
+.revenue-card p {
+    color: var(--revenue-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.playlists-keywords {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.playlists, .keywords {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.playlists h3, .keywords h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.playlists ul, .keywords ul {
+    list-style-type: none;
+}
+
+.playlists li, .keywords li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.playlists li:last-child, .keywords li:last-child {
+    border-bottom: none;
+}
+
+.charts-section {
+    padding: 2rem 5%;
+    background-color: #fff;
+    color: #333;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+.charts-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--bg-color);
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.chart-container {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+    background-color: var(--error-color);
+    color: white;
+    padding: 1rem;
+    margin: 1rem 5%;
+    border-radius: 4px;
+    text-align: center;
+    display: none;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    padding: 2rem 5%;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+footer p {
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    nav a {
+        margin: 0 0.5rem;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    #channel-search {
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+    }
+
+    .btn-primary {
+        border-radius: 4px;
+    }
+
+    .channel-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #channel-thumbnail {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .playlists-keywords {
+        grid-template-columns: 1fr;
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        padding: 2rem 1rem;
+    }
+}
